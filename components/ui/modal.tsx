@@ -11,7 +11,7 @@ import {
 interface ModalProps {
   title: string;
   description?: string;
-  body: React.ReactNode;
+  children?: React.ReactNode;
   onClose: () => void;
   isOpen: boolean;
 }
@@ -19,7 +19,7 @@ interface ModalProps {
 const Modal: React.FC<ModalProps> = ({
   title,
   description,
-  body,
+  children,
   onClose,
   isOpen,
 }) => {
@@ -35,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription>{description}</DialogDescription>
         </DialogHeader>
-        <div>{body}</div>
+        <div>{children}</div>
       </DialogContent>
     </Dialog>
   );
