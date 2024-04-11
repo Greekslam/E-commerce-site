@@ -18,7 +18,11 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
     redirect("/");
   }
 
-  return <div>WELCOME! To {store?.name}</div>;
+  return (
+    <div className="mt-4 px-3">
+      WELCOME TO {store?.name.toLocaleUpperCase()}
+    </div>
+  );
 };
 
 export default DashboardPage;
