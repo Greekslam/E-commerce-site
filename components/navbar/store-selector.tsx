@@ -51,7 +51,7 @@ const StoreSelector = ({ className, items = [] }: StoreSelectorProps) => {
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
+      <PopoverTrigger asChild disabled={false}>
         <Button
           size="sm"
           variant="outline"
