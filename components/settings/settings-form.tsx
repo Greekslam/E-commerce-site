@@ -66,11 +66,7 @@ const SettingForm: React.FC<SettingFormProps> = ({ initialData }) => {
 
   return (
     <>
-      <AlertModal
-        storeId={params.storeId}
-        isOpen={openModal}
-        onClose={() => setOpenModal(false)}
-      />
+      <AlertModal isOpen={openModal} onClose={() => setOpenModal(false)} />
       <div className="mt-4 w-full flex justify-between items-center">
         <Heading title="Settings" description="Update store details." />
         <Button
