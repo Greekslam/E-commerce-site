@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Store } from "@prisma/client";
 import { useParams, useRouter } from "next/navigation";
-import { Check, ChevronsUpDown, Plus } from "lucide-react";
+import { Check, ChevronsUpDown, Plus, StoreIcon } from "lucide-react";
 
 import useStoreModal from "@/app/hooks/useStoreModal";
 import {
@@ -75,12 +75,13 @@ const StoreSelector = ({ className, items = [] }: StoreSelectorProps) => {
                   key={item.value}
                   value={item.value}
                   onSelect={() => onSelectItem(item)}
-                  className="justify-between"
+                  className="text-sm"
                 >
+                  <StoreIcon className="mr-2 h-4 w-4" />
                   {item.label}
                   <Check
                     className={cn(
-                      "mr-2 h-4 w-4",
+                      "ml-auto h-4 w-4",
                       item.value === params.storeId
                         ? "opacity-100"
                         : "opacity-0"
